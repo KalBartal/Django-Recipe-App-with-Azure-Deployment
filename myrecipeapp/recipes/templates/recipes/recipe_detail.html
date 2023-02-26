@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-7">
+            <h2 class="text-3xl font-bold mb-4">{{ recipe.title }}</h2>
+            <div class="mb-4">
+                <h3 class="text-xl font-bold">Ingredients</h3>
+                <pre style="white-space: pre-wrap;">{{ recipe.ingredients }}</pre>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold">Instructions</h3>
+                <pre style="white-space: pre-wrap; width: 175%;">{{ recipe.instructions }}</pre>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <img src="{{ recipe.image.url }}" alt="{{ recipe.title }}" class="img-fluid mb-4" style="width: 100%">
+        </div>
+    </div>
+</div>
+{% endblock %}

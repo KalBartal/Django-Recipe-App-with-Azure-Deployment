@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container mt-5">
+    <h2 class="text-3xl font-bold mb-4">Recipe List</h2>
+    <div class="row">
+      {% for recipe in recipes %}
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img src="{{ recipe.image.url }}" class="card-img-top" alt="{{ recipe.title }}">
+            <div class="card-body">
+              <h3 class="card-title">{{ recipe.title }}</h3>
+              <p class="card-text">{{ recipe.description }}</p>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#recipe-modal-{{ recipe.id }}">
+                View Recipe
+              </button>
+              <div class="modal fade" id="recipe-modal-{{ recipe.id }}" tabindex="-1" role="dialog" aria-labelledby="recipe-modal-label-{{ recipe.id }}" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="recipe-modal-label-{{ recipe.id }}">{{ recipe.title }}</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p>{{ recipe.description }}</p>
+                      <hr>
+                      <h3 class="text-xl font-bold">Ingredients</h3>
+                      <pre style="white-space: pre-wrap;">{{ recipe.ingredients }}</pre>
+                      <hr>
+                      <h3 class="text-xl font-bold">Instructions</h3>
+                      <pre style="white-space: pre-wrap;">{{ recipe.instructions }}</pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    {% if has_more %}
+      <button id="load-more-btn" class="btn btn-primary mt-4">Load More</button>
+    {% endif %}
+  </div>
+{% endblock %}
+
+{% block scripts %}
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+{% endblock %}

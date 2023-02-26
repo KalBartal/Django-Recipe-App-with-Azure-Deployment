@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/17089577-e594-452c-8369-bdf13b528f37/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/FreezerBurritoKing",
+    "appService.deploySubpath": "."
+}
