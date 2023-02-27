@@ -1,4 +1,8 @@
-# Django Recipe App with Bootstrap and JavaScript
+# Django Recipe App with Azure Deployment
+
+[ ![Django Recipe App with Azure Deployment](./image.png)](freezerburritoking.azurewebsites.net)
+
+Available on Azure at [freezerburritoking.azurewebsites.net](freezerburritoking.azurewebsites.net)
 
 This repository contains the source code and configuration files for a Django Recipe App that uses Bootstrap for the front-end design and JavaScript for displaying recipe details. The purpose of this project is to provide a simple but fully functional example of a Django application that utilizes Bootstrap and JavaScript for styling and dynamic content display.
 
