@@ -9,9 +9,9 @@ This repository contains the source code and configuration files for a Django Re
 ## Features
 The Recipe App has the following features:
 
-- Creation, editing, and deletion of recipes.
-- Displaying of recipe details with JavaScript.
-- Responsive design using Bootstrap for better mobile viewing.
+- Creation, editing, and deletion of recipes
+- Displaying of recipe details with JavaScript
+- Responsive design using Bootstrap for better mobile viewing
 
 ## Getting Started
 To run the Recipe App locally, you need to follow these steps:
